@@ -9,16 +9,17 @@
 
 2. in a new terminal session, use tail to continuously read the pipe:
 	
-	`tail -f send_the_rest`
+	`tail -f /tmp/send_the_rest`
 
 3. pipe curl's output to `send_the_rest` by redirecting stderr to our pipe:
 	
-	`curl --request GET <endpoint-url> 2>send_the_rest`	
+	`curl --request GET <endpoint-url> 2>/tmp/send_the_rest`	
 
 	or better yet, redirect its output so prompts to stdin and stderr can appear where they belong. 
 
-	`curl --request GET "<endpoint>" -o send_the_rest`
+	`curl --request GET "<endpoint>" -o /tmp/send_the_rest`
 
 	we can also pipe the headers that were sent
 	
-	`curl --request GET "<endpoint>" -o send_the_rest -D my_pipe`
+	`curl --request GET "<endpoint>" -o /tmp/send_the_rest -D /tmp/send_the_rest`
+	
