@@ -15,12 +15,10 @@
 	
 	`curl --request GET <endpoint-url> 2>send_the_rest`	
 
-	or better yet, redirect its output so prompts to stdin and errors can appear where they belong. 
+	or better yet, redirect its output so prompts to stdin and stderr can appear where they belong. 
 
 	`curl --request GET "<endpoint>" -o send_the_rest`
 
 	we can also pipe the headers that were sent
 	
 	`curl --request GET "<endpoint>" -o send_the_rest -D my_pipe`
-
-
