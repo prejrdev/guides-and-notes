@@ -1,4 +1,4 @@
-# Working with curl to test APIs
+# Notes from working with curl to test APIs
 
 ## the dual terminal set up
 
@@ -18,4 +18,9 @@
 	or better yet, redirect its output so prompts to stdin and errors can appear where they belong. 
 
 	`curl --request GET "<endpoint>" -o send_the_rest`
+
+	we can also pipe the headers that were sent
+	
+	`curl --request GET "<endpoint>" -o send_the_rest -D my_pipe`
+
 
